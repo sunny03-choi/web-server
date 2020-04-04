@@ -16,13 +16,13 @@ func defaultHandler(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("key:", k)
 		fmt.Println("vak:", strings.Join(v, ""))
 	}
-	fmt.Fprintf(w, "golang WenSerer Working!")
+	fmt.Fprintf(w, "golang WebSerer Working!")
 }
 func main() {
 	http.HandleFunc("/", defaultHandler)
 	err := http.ListenAndServe(":9000", nil)
 	if err != nil {
-		log.Fatal("ListerAndServe:", err)
+		log.Fatal("ListenAndServe:", err)
 	} else {
 		fmt.Println("ListenAndServe: Started! -> Port(9000)")
 	}
