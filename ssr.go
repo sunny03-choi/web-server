@@ -25,7 +25,7 @@ func main() {
 	http.HandleFunc("/", defaultHandler)
 	err := http.ListenAndServe(":9000", nil)
 	if err != nil {
-		log.Fatal("ListerAndServe:", err)
+		log.Fatal("ListenAndServe:", err)
 	} else {
 		fmt.Println("ListenAndServe: Started! -> Port(9000)")
 	}
