@@ -19,3 +19,7 @@ func (h *testHandler) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	str := "Your Requset Path is" + req.URL.Path
 	w.Write([]byte(str))
 }
+
+type Handler interface {
+	ServeHttp(w http.ResponseWriter, r *http.Request)
+}
