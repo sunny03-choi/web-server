@@ -8,7 +8,7 @@ import (
 
 func main() {
 	http.Handle("/", new(staticHandler))
-	http.ListenAndServe(":5893", nil)
+	http.ListenAndServe(":5000", nil)
 }
 
 type staticHandler struct {
@@ -16,7 +16,7 @@ type staticHandler struct {
 }
 
 func (h *staticHandler) ServeHTTP(w http.ResponseWriter, req *http.Request) {
-	localPath := "wwwroot" + req.URL.Path
+	localPath := "sunwoo" + req.URL.Path
 	content, err := ioutil.ReadFile(localPath)
 	if err != nil {
 		w.WriteHeader(404)
