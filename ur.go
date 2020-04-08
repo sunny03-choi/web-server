@@ -8,7 +8,7 @@ import (
 
 func main() {
 	http.Handle("/", new(staticHandler))
-	http.ListenAndServe(":63342", nil)
+	http.ListenAndServe(":5893", nil)
 }
 
 type staticHandler struct {
